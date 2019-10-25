@@ -1,0 +1,112 @@
+#prices
+	padding 60px 0
+	background-color: #C4BEBF
+	background-image url(../img/prices-bg.jpg)
+	background-repeat no-repeat
+	background-position: center
+	background-size: cover
+	position relative
+	&:before
+		@extend #main:before
+	.container
+		@extend #main .container
+.packet
+	width 100%
+	max-width 340px
+	margin 0 auto
+	background-color: rgba(#fff,.9)
+	box-shadow: 4px -4px 0 rgba(0,0,0,.25)
+	border: 1px solid rgba(0,0,0,.1)
+	&-head
+		padding 20px
+		color #fff
+		background-color: myG
+		font-size: 24px
+		font-family: DiB
+		text-align: center
+		&-title
+			small
+				font-family: DiL
+				font-size: 16px
+				display block
+	&-body
+		padding 20px
+		min-height 347px
+		&-list
+			margin-left: 15px
+			li
+				margin-bottom: 15px
+				position relative
+				list-style none
+				padding-left: 15px
+				&:before
+					content: ''
+					display block
+					width 8px
+					height 8px
+					position: absolute
+					top 11px
+					left 0
+					background-color: myG
+					box-shadow: 1px -1px 0 rgba(0,0,0,.25)
+				&:last-child
+					margin-bottom: 0
+	&-footer
+		padding 0 20px 20px
+		text-align: center
+.cost
+	font-size: 24px
+	font-family: DiL
+	margin-bottom: 15px
+	span
+		display block
+		font-family: DiBk
+		font-size: 30px
+		line-height: 26px
+	&-full
+		span
+			text-decoration: line-through
+	&-sale
+		color red
+	&-today
+		color green
+		margin-bottom: 25px
+.button-cost
+	position relative
+	max-width 90%
+	z-index 12
+.prepayment
+.timer
+	padding 20px
+	text-align: center
+	background-color: rgba(#fff,.9)
+	box-shadow: 4px -4px 0 rgba(0,0,0,.25)
+	border: 1px solid rgba(0,0,0,.1)
+	width 100%
+	max-width 650px
+	margin 25px auto 0
+	&-title
+		font-size: 32px
+		font-family: DiBk
+		color red
+.prepayment-text
+	font-size: 20px
+.button-prepayment
+	position relative
+	z-index 13
+	margin-top: 15px
+.flip-clock-wrapper
+	width 100%
+	margin-top: 10px
+.flip-clock-wrapper
+	width: 100%
+	max-width 460px
+	margin-top: 20px
+.flip-clock-divider .flip-clock-label
+	color initial
+.flip-clock-dot
+	background-color: red
+	box-shadow: none
+.flip-clock-wrapper ul li a div div.inn
+	color: #fff
+	background-color: red

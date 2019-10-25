@@ -1,3 +1,58 @@
+Di = 'DINPro', sans-serif;
+DiBk  = 'DINProBlack', sans-serif;
+DiB = 'DINProBold', sans-serif;
+DiL = 'DINProLight', sans-serif;
+myG = #9ED182
+myY = #F2E57C
+
+@font-face {
+	font-family: 'DINPro';
+	src: url('../fonts/DINPro.eot');
+	src: url('../fonts/DINPro.eot') format('embedded-opentype'),
+		 url('../fonts/DINPro.woff2') format('woff2'),
+		 url('../fonts/DINPro.woff') format('woff'),
+		 url('../fonts/DINPro.ttf') format('truetype'),
+		 url('../fonts/DINPro.svg#DINPro') format('svg');
+	font-display: fallback;
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'DINProBlack';
+	src: url('../fonts/DINProBlack.eot');
+	src: url('../fonts/DINProBlack.eot') format('embedded-opentype'),
+		 url('../fonts/DINProBlack.woff2') format('woff2'),
+		 url('../fonts/DINProBlack.woff') format('woff'),
+		 url('../fonts/DINProBlack.ttf') format('truetype'),
+		 url('../fonts/DINProBlack.svg#DINProBlack') format('svg');
+	font-display: fallback;
+	font-weight: bold;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'DINProBold';
+	src: url('../fonts/DINProBold.eot');
+	src: url('../fonts/DINProBold.eot') format('embedded-opentype'),
+		 url('../fonts/DINProBold.woff2') format('woff2'),
+		 url('../fonts/DINProBold.woff') format('woff'),
+		 url('../fonts/DINProBold.ttf') format('truetype'),
+		 url('../fonts/DINProBold.svg#DINProBold') format('svg');
+	font-display: fallback;
+	font-weight: bold;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'DINProLight';
+	src: url('../fonts/DINProLight.eot');
+	src: url('../fonts/DINProLight.eot') format('embedded-opentype'),
+		 url('../fonts/DINProLight.woff2') format('woff2'),
+		 url('../fonts/DINProLight.woff') format('woff'),
+		 url('../fonts/DINProLight.ttf') format('truetype'),
+		 url('../fonts/DINProLight.svg#DINProLight') format('svg');
+	font-display: fallback;
+	font-weight: 100;
+	font-style: normal;
+}
 @import '../css/_css/bootstrap.min.css'
 @import '../css/_css/flipclock.min.css'
 
@@ -7,6 +62,8 @@
 	outline none
 body
 	font-size: 18px
+	font-family: Di
+	color #3E2E14
 a
 	color: #fefefe
 	&:focus
@@ -55,6 +112,64 @@ footer
 		right 0
 		bottom 0
 		cursor pointer
+.general-title
+	text-align: center
+	font-size: 28px
+	font-family: DiB
+	// margin-bottom: 35px
+	&:after
+		content: ''
+		display block
+		width 100%
+		max-width 500px
+		height 5px
+		background-color: #3E2E14
+		margin 10px auto 55px
+		transform: skewX(-45deg);
+.button
+	display block
+	margin: 0 auto
+	position relative
+	text-align: center
+	color myG - 50%
+	text-transform: uppercase
+	height 50px
+	line-height 50px
+	width 100%
+	max-width 250px
+	// text-shadow: 1px 1px 0 #3E2E14
+	transition: all .3s ease
+	&:before
+		content: ''
+		position: absolute
+		top: 0
+		left 0
+		bottom 0
+		right 0
+		width 100%
+		height 100%
+		// background-color: myG
+		background-image: linear-gradient(to top, myG 0%, rgba(myG,.6) 100%)
+		z-index -1
+		transform: skewX(-25deg);
+		border: 1px solid myG - 50%
+	&:focus
+		text-decoration: none
+		color myG - 50%
+	&:hover
+		text-decoration: none
+		color myG - 50%
+		transform: translateY(-3px)
+.general-list
+	li
+		padding-left: 24px
+		margin-bottom: 20px
+		background-image url(../img/arrow.png)
+		background-repeat no-repeat
+		background-position: left top 5px
+		list-style: none
+		&:last-child
+			margin-bottom: 0
 
 @import 'main/0.header'
 @import 'main/1.main'

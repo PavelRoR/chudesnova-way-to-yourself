@@ -1,0 +1,26 @@
+#get
+	@extend #content
+.get-list
+	width 100%
+	max-width 960px
+	margin 0 auto 40px
+	padding 20px 20px 20px 30px
+	box-shadow: 4px -4px 0 rgba(0,0,0,.25)
+	border: 1px solid rgba(0,0,0,.1)
+	li
+		margin-bottom: 20px
+		position relative
+		list-style none
+		padding-left: 15px
+		&:before
+			content: ''
+			display block
+			width 8px
+			height 8px
+			position: absolute
+			top 9px
+			left 0
+			background-color: myG
+			box-shadow: 1px -1px 0 rgba(0,0,0,.25)
+		&:last-child
+			margin-bottom: 0
