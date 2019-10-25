@@ -1,0 +1,26 @@
+-var head_url = 'https://chudesnova.mastervision.su/way-to-yourself/';
+-var head_title = '«Путь к себе»';
+-var head_description = 'Записи онлайн-мастер-класса Надежды Чудесновой';
+//- -var head_img = 'img/banner.jpg';
+-var styles = 'css/styles.min.css';
+-var fav_ico = 'favicon.ico';
+-var fav_png = 'favicon.png';
+
+<!DOCTYPE html>
+html(lang="ru")
+	head
+		include pug/head
+		include pug/scripts/head_scripts
+	body
+		include pug/scripts/body_top_scripts
+		include pug/main/1.main.pug
+		include pug/main/2.contents.pug
+		include pug/main/3.for.pug
+		include pug/main/4.get.pug
+		include pug/main/5.results.pug
+		include pug/main/6.prices.pug
+		include pug/main/7.records.pug
+		include pug/main/8.footer.pug
+		include pug/main/9.scripts.pug
+		//- include pug/scripts/chat
+		include pug/scripts/body_bottom_scripts
