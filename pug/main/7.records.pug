@@ -1,0 +1,24 @@
+section#records
+	.container
+		+gt('hide','Записи интенсива нет в свободном доступе')
+		p.day-text.text-sale.hide Но Вы можете купить запись интенсива за 390р. и радоваться жизни вместе с теми, кто её уже смотрел
+		a.button.button-sale.hide(href="https://shop.mastervision.su/?r=ordering/cart/as1&id=4012&clean=true&lg=ru" target="_blank") Купить
+		+gt('','Записи мастер-класса:')
+		#recs
+			ul.recs-links
+				li День 1
+				li День 2
+			.recs-container
+				.day.day-1
+					h4.day-title Запись от 30.10.19
+					.video-wrapper.video-wrapper-rec
+						iframe(src="https://player.vimeo.com/video/"  allowFullScreen mozallowfullscreen webkitAllowFullScreen)
+					p.day-text Занятие состоится 30.10.19, в 19:00
+					p.day-text Запись занятия появится здесь 31.10.19, после 13:00
+				.day.day-2
+					h4.day-title Запись от 31.10.19
+					.video-wrapper.video-wrapper-rec
+						iframe(src="https://player.vimeo.com/video/"  allowFullScreen mozallowfullscreen webkitAllowFullScreen)
+					p.day-text Занятие состоится 31.10.19, в 19:00
+					p.day-text Запись занятия появится здесь 01.11.19, после 13:00
+			p.day-text.hide Записи занятий будут в открытом доступе до 04.11.19

@@ -1,0 +1,99 @@
+-var full_1 = '4 400р.'
+-var full_2 = '6 500р.'
+-var full_3 = '11 900р.'
+
+-var sale_1 = '1 000р.'
+-var sale_2 = '2 000р.'
+-var sale_3 = '4 000р.'
+
+-var today_1 = '3 400р.'
+-var today_2 = '4 500р.'
+-var today_3 = '7 900р.'
+
+-var link_1 = 'https://shop.mastervision.su/?r=ordering/cart/as1&id=4027&clean=true&lg=ru'
+-var link_2 = 'https://shop.mastervision.su/?r=ordering/cart/as1&id=4031&clean=true&lg=ru'
+-var link_3 = 'https://shop.mastervision.su/?r=ordering/cart/as1&id=4035&clean=true&lg=ru'
+
+-var prep_bonus = '500р.';
+-var prep_cred = '1 000р.';
+-var prep_link = 'https://shop.mastervision.su/?r=ordering/cart/as1&id=4039&clean=true&lg=ru';
+
+section#prices
+	.container
+		+gt('','Выберите свой пакет участия:')
+		.packets
+			.row
+				.col-md-4.col-sm-4
+					.packet
+						.packet-head
+							h4.head-title
+								small пакет
+								| Базовый
+						.packet-body
+							ul.packet-body-list
+								li 10 видео-заданий
+								li ответ на выполненное задание от куратора (краткий)
+								li без участия на вебинарах
+								li без скайп-чата
+						.packet-footer
+							p.cost.cost-full Стоимость:
+								span=full_1
+							p.cost.cost-sale Скидка:
+								span#sale-1=sale_1
+							p.cost.cost-today Стоимость сегодня:
+								span#today-1=today_1
+							+b('button-cost',link_1,'_blank','выбрать','link-1')
+				.col-md-4.col-sm-4
+					.packet
+						.packet-head
+							h4.head-title
+								small пакет
+								| Стандарт
+						.packet-body
+							ul.packet-body-list
+								li 10 видео-заданий + 3 онлайн-встречи + 1 бонусное занятие
+								li ответ на выполненное задание от куратора (развернутый)
+								li участие в вебинарах
+								li скайп-чат
+						.packet-footer
+							p.cost.cost-full Стоимость:
+								span=full_2
+							p.cost.cost-sale Скидка:
+								span#sale-2=sale_2
+							p.cost.cost-today Стоимость сегодня:
+								span#today-2=today_2
+							+b('button-cost',link_2,'_blank','выбрать','link-2')
+				.col-md-4.col-sm-4
+					.packet
+						.packet-head
+							h4.head-title
+								small пакет
+								| VIP
+						.packet-body
+							ul.packet-body-list
+								li 10 видео-заданий + 3 онлайн-встречи + 2 бонусных занятия
+								li ответ на выполненное задание от куратора (развернутый)
+								li участие в вебинарах
+								li личное сопровождение
+								li личная консультация (30-60 минут)
+								li скайп-чат
+						.packet-footer
+							p.cost.cost-full Стоимость:
+								span=full_3
+							p.cost.cost-sale Скидка:
+								span#sale-3=sale_3
+							p.cost.cost-today Стоимость сегодня:
+								span#today-3=today_3
+							+b('button-cost',link_3,'_blank','выбрать','link-3')
+		.prepayment
+			h4.prepayment-title Акция!!!
+			p.prepayment-text Платите 500р., бонусом получаете 
+				span#prepayment-bonus= prep_bonus 
+				br
+				| На счет зачисляется 
+				span#prepayment-credited= prep_cred
+			a.button.prepayment-button(href= prep_link target="_blank")#prepayment-link Оплатить 500р.
+		.timer
+			h4.timer-title Цена изменится через:
+			.clock
+			.clock-stop
